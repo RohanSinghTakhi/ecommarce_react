@@ -7,6 +7,8 @@ import {
 import './App.css'
 import Home_pages from './pages/Home_pages';
 import NOPage from "./pages/NOPage"
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 function App() {
 

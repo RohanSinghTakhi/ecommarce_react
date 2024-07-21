@@ -1,0 +1,92 @@
+.footer {
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px 60px;
+    font-family: Arial, sans-serif;
+}
+
+.footer-section {
+    flex: 1 1 200px;
+    margin: 10px;
+}
+
+
+.footer-section h4 {
+    margin-bottom: 25px;
+    font-size: 25px;
+    font-weight: bold;
+
+}
+.footer-section h2{
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom:25px ;
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+.footer p{
+    font-size: 17px;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-section .subscribe form {
+    display: flex;
+}
+
+.footer-section .subscribe input {
+    flex: 1;
+    padding: 5px;
+    margin-right: 5px;
+}
+
+.footer-section .subscribe button {
+    background-color: #fff;
+    color: #000;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.footer-section .app-links a img {
+    width: 120px;
+    margin: 5px;
+}
+
+
+.footer-section .social-links a {
+    color: #fff;
+    margin: 0 18px;
+    font-size: 20px;
+    
+}
+.social-links{
+    display: flex;
+    
+}
+
+.footer-bottom {
+    flex-basis: 100%;
+    text-align: center;
+    margin-top: 20px;
+    border-top: 1px solid white;
+    padding: 15px 0;
+}
+
+.footer-bottom p {
+    margin: 0;
+    
+}
