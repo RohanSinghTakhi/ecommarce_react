@@ -1,7 +1,7 @@
 import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import SearchBar from './SearchBar';
-
+import { Link } from "react-router-dom";
 function NavBar() {
   return (
     <>
@@ -17,10 +17,10 @@ function NavBar() {
 
       <div className="links ">
           <ul className='flex justify-between align-middle w-96 ' style={{fontWeight:"bolder",fontSize:"20px"}}>
-            <li>Home</li>
-            <li>About</li>
-            <li>Contact</li>
-            <li>Sign Up</li>
+            <li><Link to={'/'}>Home</Link></li>
+            <li><Link to={'/About'}>About</Link></li>
+            <li><Link to={'/Contact'}>Contact</Link></li>
+            <li><Link to={'/SignUp'}>Sign Up</Link></li>
           </ul>
       </div>
 
