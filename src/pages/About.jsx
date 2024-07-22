@@ -1,29 +1,24 @@
 import React from 'react'
 import Layout from '../components/layouts/Layout'
-import ima from "../assets/phone_about.png"
+import bout from "../assets/about.png"
 
 function About() {
   return (
     <Layout >
-        <body style={{
-            height:"90vh",display:"flex",justifyContent:"center",alignItems:"center"
-        }}>
-            
-        <div style={{backgroundColor:"blue",height:"80vh",width:"80%", display:"flex",justifyContent:"space-between" }}>
-           <div className="about_box_1" style={{width:"40%",height:"100%" ,backgroundColor:"#f5f2f2" ,display:"flex",flexDirection:"column",alignContent:"center",alignItems:"center"}}>
-            <div className="1"style={{width:"90%",height:"50%"  ,borderBottom:"1px solid grey"}}>
-                <div className='flex items-center '> 
-                    <img style={{height:"40px",marginRight:"5px",}} src={ima} alt="" srcset="" />
-                    <h1 className='text-[20px] font-medium'>Call To us </h1>
-                </div>
-            </div>
-            <div className="1"style={{width:"90%",height:"50%" }}>
-
-            </div>
-           </div>
-           <div className="about_box_2 " style={{width:"55%" ,height:"100%",backgroundColor:"green"}}></div>
+        <section class="first " style={{marginTop:"70px"}}>
+        <div style={{display:"flex",flexDirection:"column"}}>
+            <span style={{}} className='text-[50px] font-medium mt-14 mb-5'>Our Story</span>
+<span style={{maxWidth:"50vw", marginRight:"30px"}} >Launced in 2015, Exclusive is South Asia’s premier online shopping makterplace with an active presense in Bangladesh. Supported by wide range of tailored marketing, data and service solutions, Exclusive has 10,500 sallers and 300 brands and serves 3 millioons customers across the region. </span>
+<span style={{maxWidth:"50vw", marginRight:"30px"}} >Exclusive has more than 1 Million products to offer, growing at a very fast. Exclusive offers a diverse assotment in categories ranging  from consumer. </span>
         </div>
-        </body>
+        <div class="secImg">
+            <img src={bout} style={{width: "56vw",right: "-43px",top: "31px"}} />
+            <video src="assets/videos/Video 53_assets_videos_video1.m4v" autoplay="" loop="" muted=""></video>
+        </div>
+
+        
+
+    </section>
     </Layout>
   )
 }
