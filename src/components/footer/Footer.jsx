@@ -31,7 +31,7 @@ const Footer = () => {
                         style={{
                             border: "2px solid white",
                             borderLeft: "none",
-                            padding: "10px 20px",
+                            
                             cursor: "pointer",
                             padding:"17px ",
                             backgroundColor: "black",
