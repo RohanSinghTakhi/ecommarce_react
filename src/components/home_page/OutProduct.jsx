@@ -1,5 +1,46 @@
-// productData 
+import pro1 from "../../assets/product1.png"
+import pro2 from "../../assets/product2.png"
+import pro3 from "../../assets/Product3.png"
+import pro4 from "../../assets/Product4.png"
+
+
 const productData = [
+    {
+        id: 1,
+        image: pro1,
+        title: 'The north coat',
+        desc: 'Shop Hand Painted Blue Kaushalam Tea Pot in Aluminium, handmade by Mrinalika Jain. Fair pricing. Ethically made. Positive impact.',
+        price: 150,
+        trendingProductName: 'Featured',
+        quantity: 1,
+    },
+    {
+        id: 2,
+        image: pro2,
+        title: 'Gucci duffle bag',
+        desc: 'Shop Hand Painted Blue Kaushalam Tea Pot in Aluminium, handmade by Mrinalika Jain. Fair pricing. Ethically made. Positive impact.',
+        price: 120,
+        trendingProductName: 'Featured',
+        quantity: 1,
+    },
+    {
+        id: 3,
+        image: pro3,
+        title: 'RGB liquid CPU Cooler',
+        desc: 'Shop Hand Painted Blue Kaushalam Tea Pot in Aluminium, handmade by Mrinalika Jain. Fair pricing. Ethically made. Positive impact.',
+        price: 130,
+        trendingProductName: 'Featured',
+        quantity: 1,
+    },
+    {
+        id: 4,
+        image: pro4,
+        title: 'Small BookSelf',
+        desc: 'Shop Hand Painted Blue Kaushalam Tea Pot in Aluminium, handmade by Mrinalika Jain. Fair pricing. Ethically made. Positive impact.',
+        price: 120,
+        trendingProductName: 'Featured',
+        quantity: 1,
+    },
     {
         id: 1,
         image: 'https://i.pinimg.com/564x/3e/05/ce/3e05cefbc7eec79ac175ea8490a67939.jpg',
@@ -38,9 +79,11 @@ const productData = [
     }
 ]
 
-const Sale = () => {
+const OurProduct = () => {
     return (
         <div className="mt-10">
+            
+
             {/* main  */}
             <section className="text-gray-600 body-font">
                 <div className="container px-5 py-5 mx-auto">
@@ -83,4 +126,4 @@ const Sale = () => {
     );
 }
 
-export default Sale;
+export default OurProduct;
