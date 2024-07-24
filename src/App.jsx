@@ -11,6 +11,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import SignUp from './pages/SignUp';
+import Cart from './pages/Cart';
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
           <Route path='/About' element={<About/>} />
           <Route path='/Contact' element={<Contact/>} />
           <Route path='/SignUp' element={<SignUp/>} />
+          <Route path='/Cart' element={<Cart/>} />
           <Route path="*" element={<NOPage />} />
         </Routes>
       </Router>
