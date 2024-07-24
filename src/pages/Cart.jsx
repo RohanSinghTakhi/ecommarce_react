@@ -87,6 +87,29 @@ function Cart() {
           ))}
         </div>
       </section>
+      <section className='about_box mb-28 mt-5' style={{display:"flex",justifyContent:"center",alignItems:"center",width:"98vw" }} >
+      <div style={{height:"37vh",width:"70vw" ,display:"flex"}}>
+            <div style={{width:"60%",height:"100%"}}>
+              <input style={{width:"250px",height:"45px",padding:"0 10px",border:"2px solid grey",alignItems:"center"}} type="text" name="" placeholder='Apply Code' id="" />
+              <button type="button" className="btn btn-danger w-24 h-12 ml-3 -mt-1"> Submit</button>
+            </div>
+            <div className='p-3' style={{width:"40%",height:"100%",border:"2px solid grey"}}>
+              <h1 className='font-medium text-[25px] mt-3 ml-2 '>Cart Total
+              </h1>
+              <p className='font-medium text-[20px] mt-3 ml-2 border-b-2 h-10 flex justify-between'>Subtotal: <span>1100</span></p>
+              <h1 className='font-medium text-[20px] mt-3 ml-2 border-b-2 h-10 flex justify-between'>Shipping: <span>Free</span></h1>
+              <h1 className='font-medium text-[20px] mt-3 ml-2  h-10 flex justify-between'>Total: <span>1100</span></h1>
+              
+              <div className='flex justify-center'>
+                <button type="button" className="btn btn-danger w-24 h-10 ml-3 -mt-1"> Submit</button>
+                </div>
+            </div>
+      </div>
+
+
+
+
+    </section>
     </Layout>
   );
 }
