@@ -1,7 +1,7 @@
 import React from 'react'
 import Layout from '../components/layouts/Layout'
 import ima from "../assets/phone_about.png"
-import mail from"../assets/mail_about.png"
+import mail from "../assets/mail_about.png"
 
 
 

@@ -6,7 +6,7 @@ import pro4 from "../../assets/Product4.png"
 
 const productData = [
     {
-        id: 1,
+        id: 5,
         image: pro1,
         title: 'The north coat',
         desc: 'Shop Hand Painted Blue Kaushalam Tea Pot in Aluminium, handmade by Mrinalika Jain. Fair pricing. Ethically made. Positive impact.',
@@ -15,7 +15,7 @@ const productData = [
         quantity: 1,
     },
     {
-        id: 2,
+        id: 6,
         image: pro2,
         title: 'Gucci duffle bag',
         desc: 'Shop Hand Painted Blue Kaushalam Tea Pot in Aluminium, handmade by Mrinalika Jain. Fair pricing. Ethically made. Positive impact.',
@@ -24,7 +24,7 @@ const productData = [
         quantity: 1,
     },
     {
-        id: 3,
+        id: 7,
         image: pro3,
         title: 'RGB liquid CPU Cooler',
         desc: 'Shop Hand Painted Blue Kaushalam Tea Pot in Aluminium, handmade by Mrinalika Jain. Fair pricing. Ethically made. Positive impact.',
@@ -33,7 +33,7 @@ const productData = [
         quantity: 1,
     },
     {
-        id: 4,
+        id: 8,
         image: pro4,
         title: 'Small BookSelf',
         desc: 'Shop Hand Painted Blue Kaushalam Tea Pot in Aluminium, handmade by Mrinalika Jain. Fair pricing. Ethically made. Positive impact.',

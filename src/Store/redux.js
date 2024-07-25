@@ -1,22 +1,24 @@
 import { createSlice, nanoid } from "@reduxjs/toolkit";
 
-const initialState = { users: [{ id: 1, name: "User", email: "SignUp" }] };
+ 
+const initialState = { users: [{ id: 1, name: "Sign in", email: "" },{}] };
 
-export const userSlice = createSlice({
+export const UserSlice = createSlice({
   name: "user",
   initialState,
   reducers: {
-    addUser: (state, action) => {
-      const user = {
-        id: nanoid(),
-        name: action.payload.name,
-        email: action.payload.email,
-        pass: action.payload.pass,
-      };
-      state.users.push(user);
+    adduser: (state, action) => {
+      const { id, name, email } = action.payload;
+      const existingUserIndex = state.users.findIndex(user => user.id === id);
+
+      if (existingUserIndex !== -1) {
+        state.users[existingUserIndex] = { id, name, email };
+      } else {
+        state.users.push({ id: nanoid(), name, email });
+      }
     }
   }
 });
 
-export const { addUser } = userSlice.actions;
-export default userSlice.reducer;
+export const { adduser } = UserSlice.actions;
+export default UserSlice.reducer;
