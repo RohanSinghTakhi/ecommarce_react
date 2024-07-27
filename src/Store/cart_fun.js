@@ -12,22 +12,25 @@ export const cartSlice = createSlice({
       );
 
       if (existingItemIndex >= 0) {
-        state.carts[existingItemIndex].quantity += 1;
+        state.carts[existingItemIndex].quantity = action.payload.quantity;
         state.carts[existingItemIndex].subtotal = state.carts[existingItemIndex].price * state.carts[existingItemIndex].quantity;
       } else {
         const cart = {
           id: action.payload.id,
           price: action.payload.price,
-          quantity: 1,
+          quantity: action.payload.quantity,
           image: action.payload.image,
-          subtotal: action.payload.price
+          subtotal: action.payload.price * action.payload.quantity
         };
         state.carts.push(cart);
       }
+    },
+    removeItem: (state, action) => {
+      state.carts = state.carts.filter((cart) => cart.id !== action.payload.id);
     }
   }
 });
 
-export const { updateCart } = cartSlice.actions;
+export const { updateCart, removeItem } = cartSlice.actions;
 
 export default cartSlice.reducer;

@@ -1,4 +1,6 @@
-// productData 
+import { useDispatch } from "react-redux";
+import { updateCart } from '../../Store/cart_fun.js';
+
 const productData = [
     {
         id: 1,
@@ -38,7 +40,14 @@ const productData = [
     }
 ]
 
+
+
 const Sale = () => {
+
+const dispatch=useDispatch();
+const handleAddToCart = (item) => {
+    dispatch(updateCart(item));
+  };
     return (
         <div className="mt-10">
             {/* main  */}
@@ -67,7 +76,7 @@ const Sale = () => {
                                             </h1>
 
                                             <div className="flex justify-center ">
-                                                <button className=" bg-red-700 hover:bg-red-600 w-full text-white py-[4px] rounded-lg font-bold">
+                                                <button onClick={()=> handleAddToCart(item)} className=" bg-red-700 hover:bg-red-600 w-full text-white py-[4px] rounded-lg font-bold">
                                                     Add To Cart
                                                 </button>
                                             </div>

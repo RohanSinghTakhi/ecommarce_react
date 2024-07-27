@@ -13,9 +13,10 @@ const Cart = () => {
 
   const handleQuantityChange = (id, newQuantity) => {
     if (newQuantity <= 0) {
-      dispatch(removeItem(id));
+      dispatch(removeItem({ id }));
     } else {
-      dispatch(updateCart({ id, quantity: newQuantity }));
+      const item = cartItems.find(item => item.id === id);
+      dispatch(updateCart({ id, quantity: newQuantity, price: item.price, image: item.image }));
     }
   };
 

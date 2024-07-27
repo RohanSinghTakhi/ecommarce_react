@@ -8,7 +8,8 @@ import { useSelector } from 'react-redux';
 
 function NavBar() {
   const location = useLocation();
-  const user = useSelector(state => state.user.users[1]); // Access the user state
+  const user = useSelector(state => state.user.users[1]);
+  // Access the user state
 
   return (
     <>
@@ -35,7 +36,9 @@ function NavBar() {
           <SearchBar />
           {location.pathname !== "/SignUp" && (
             <>
-             <Link to='/Cart'><img width="35px" height="25px" className='ml-4 mr-5' src={cart} alt="Cart" /></Link> 
+              <Link to='/Cart'>
+                <img width="35px" height="25px" className='ml-4 mr-5' src={cart} alt="Cart" />
+              </Link> 
               <div className="dropdown">
                 <img
                   width="35px"
@@ -50,12 +53,14 @@ function NavBar() {
                   style={{ cursor: 'pointer' }} // Make sure the cursor indicates it's clickable
                 />
                 <ul className="dropdown-menu absolute inset-0 bg-black bg-opacity-50 backdrop-blur-md z-10" aria-labelledby="dropdownMenuButton">
-                  
-                  <li><a className="dropdown-item" href="#">{user.name}</a></li>
-                  <li><a className="dropdown-item" href="#">{user.email}</a></li>
-
-
-                  <li><a className="dropdown-item" href="/SignUp">Signup</a></li>
+                  {Object.keys(user).length === 0 ? (
+                    <li><a className="dropdown-item" href="/SignUp">Signup</a></li>
+                  ) : (
+                    <>
+                      <li><a className="dropdown-item" href="#">{user.name}</a></li>
+                      <li><a className="dropdown-item" href="#">{user.email}</a></li>
+                    </>
+                  )}
                 </ul>
               </div>
             </>

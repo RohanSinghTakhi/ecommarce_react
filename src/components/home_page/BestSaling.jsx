@@ -2,6 +2,9 @@ import pro1 from "../../assets/product1.png"
 import pro2 from "../../assets/product2.png"
 import pro3 from "../../assets/Product3.png"
 import pro4 from "../../assets/Product4.png"
+import { useDispatch } from 'react-redux';
+import { updateCart } from '../../Store/cart_fun.js';
+
 
 
 const productData = [
@@ -44,6 +47,12 @@ const productData = [
 ]
 
 const BestSaling = () => {
+    const dispatch = useDispatch();
+  
+    const handleAddToCart = (item) => {
+      dispatch(updateCart(item));
+    };
+  
     return (
         <div className="mt-10">
             
@@ -74,7 +83,7 @@ const BestSaling = () => {
                                             </h1>
 
                                             <div className="flex justify-center ">
-                                                <button className=" bg-red-700 hover:bg-red-600 w-full text-white py-[4px] rounded-lg font-bold">
+                                                <button onClick={() => handleAddToCart(item)} className=" bg-red-700 hover:bg-red-600 w-full text-white py-[4px] rounded-lg font-bold">
                                                     Add To Cart
                                                 </button>
                                             </div>
